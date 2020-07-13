@@ -1,0 +1,172 @@
+---
+title: "Old Faithful"
+author: "Adam Canton"
+date: "7/13/2020"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(shiny)
+library(rsconnect)
+```
+
+```{r}
+data("faithful")
+```
+
+```{r}
+summary(faithful)
+```
+
+```{r, echo = FALSE}
+# App with just slide bar ----
+ui <- fluidPage(
+  
+  # App Title ----
+  titlePanel("Ole Faithful App!"),
+  
+  #Sidebar Layout with input and output definitions ----
+  sidebarLayout(
+    
+    #Sidebar Panel for Inputs ----
+    sidebarPanel(
+      
+      
+      #Input: Slider for the Number of bins ----
+      sliderInput(inputId = "bins",
+                  label = "Number of Bins:",
+                  min = 1,
+                  max = 50,
+                  value = 30)
+    ), # End of SidebarPanel
+    
+  # Main Panel for Displaying Outputs ----
+  mainPanel(
+    
+    
+    
+    # Output: Histogram ----
+    plotOutput(outputId = "distPlot")
+    
+  ))) # End main sidebar layout fluid page
+  
+  # Define server logic required to draw a histogram ----
+  server <- function(input, output){
+    
+    # Histogram of the Old Faithful Geyser Data ----
+    # with requested number of bins
+    # This expression that generates a histogram is wrapped in a call to renderPlot to indicate that:
+    #
+    # 1. It is reactive and therefore should be automatically re-executed when the inputsd change
+    # 2. Its Output type is a plot
+    output$distPlot <- renderPlot({
+      
+      
+      x <- faithful$waiting
+      bins <- seq(min(x), max(x), length.out = input$bins + 1)
+      
+      hist(x, breaks = bins, col = "#75AADB", border = "white",
+           xlab = "Waiting Time to Next Eruption (mins)",
+           main = "Histogram of Waiting Times")
+    })
+  }
+  
+shinyApp(ui, server)
+  
+```
+
+```{r, echo = FALSE}
+# App with slide bar and select
+ui <- fluidPage(
+  
+  # App Title ----
+  titlePanel("Ole Faithful App!"),
+  
+  #Sidebar Layout with input and output definitions ----
+  sidebarLayout(
+    
+    #Sidebar Panel for Inputs ----
+    sidebarPanel(
+      
+      
+      #Input: Slider for the Number of bins ----
+      sliderInput(inputId = "bins",
+                  label = "Number of Bins:",
+                  min = 1,
+                  max = 50,
+                  value = 30),
+      
+      
+      
+      selectInput("select", label = h3("Eruption or Waiting Time"), choices = list("Eruptions" = "eruptions", "Waiting" = "waiting"),
+                  selected = 1),
+                  hr(),
+                  fluidRow(column(3, verbatimTextOutput("Value")))
+      
+      ), # End of SidebarPanel
+    
+  # Main Panel for Displaying Outputs ----
+  mainPanel(
+    
+    
+    
+    # Output: Histogram ----
+    plotOutput(outputId = "distPlot")
+    
+  ))) # End main sidebar layout fluid page
+
+  # Define server logic required to draw a histogram ----
+  server <- function(input, output){
+    
+    # Histogram of the Old Faithful Geyser Data ----
+    # with requested number of bins
+    # This expression that generates a histogram is wrapped in a call to renderPlot to indicate that:
+    #
+    # 1. It is reactive and therefore should be automatically re-executed when the inputsd change
+    # 2. Its Output type is a plot
+    output$distPlot <- renderPlot({
+      
+      if(input$select == "waiting")
+        {
+          x <- faithful$waiting
+          bins <- seq(min(x), max(x), length.out = input$bins + 1)
+      
+          hist(x, breaks = bins, col = "#75AADB", border = "white",
+            xlab = "Waiting Time to Next Eruption (mins)",
+            main = "Histogram of Waiting Times")
+       }
+      
+      if(input$select == "eruptions")
+      {
+        
+        x <- faithful$eruptions
+          bins <- seq(min(x), max(x), length.out = input$bins + 1)
+      
+        hist(x, breaks = bins, col = "#75AADB", border = "white",
+            xlab = "Eruption Time (mins)",
+            main = "Histogram of Eruption Times")
+      }
+      
+      
+      
+    })
+  }
+  
+shinyApp(ui, server)
+```
+
+```{r}
+# Shinyapps.io Connection
+rsconnect::setAccountInfo(name='adam-ds-smu',
+			  token='60076EBA5C34114A3E20B1F5A052E7E4',
+			  secret='NeVqcAR/UTRpKL9coEPdMzwEblXWxoR/qJ+mww8K')
+
+```
+
+```{r}
+#to deploy app to shinyapps.io
+rsconnect::deployApp('F:/R For Real/Asynch Week 12/R Shiny Intro.Rmd')
+```
+
