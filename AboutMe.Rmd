@@ -30,7 +30,7 @@ output: html_document
     
 #### My Education
 - Associate in Applied Physics/Engineering - Austin Community College
-- Bachelors in Science of Applied Math
+- Bachelors in Science of Applied Math University of Houston
 - Currently enrolled in SMU Master in Data Science
   - Expected graduation May 2022
 
