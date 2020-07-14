@@ -14,7 +14,7 @@ output: html_document
 - Mathematics and Education
 <br>   
     
-#### Currently Employed by Aldine ISD
+#### Currently Employed by Aldine ISD (teaching)
 - Honors College Algebra
 - PreAP Algebra II
 - PreAP Geometry
