@@ -1,5 +1,5 @@
 ---
-title: "Simple Website"
+title: "Welcome"
 author: "Adam Canton"
 date: "7/13/2020"
 output: html_document
@@ -8,5 +8,5 @@ output: html_document
 
 # The Simple yet Awesome Website
 ## Note: The 6 Lines of text above are the YAML tags
-### We will knit thius Rmd to HTML
+### We will knit this Rmd to HTML
 ### Then Push Index.html to Github.io repo

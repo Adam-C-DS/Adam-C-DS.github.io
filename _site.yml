@@ -1,8 +1,8 @@
-name: "Simple"
+name: "Adam Canton - Data Science"
 navbar: 
-  title: "Simple"
+  title: "Welcome"
   left:
-    - text: "Home"
+    - text: "Welcome"
       href: index.html
-    - text: "CLT"
-      href: CLT_2.html
+    - text: "About Me"
+      href: 
