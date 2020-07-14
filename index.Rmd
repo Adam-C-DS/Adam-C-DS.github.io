@@ -6,4 +6,8 @@ output: html_document
 ---
 
 
-# This site is the repository for my analysis.
+# This site is the repository for my Data Science work and analysis.
+## Current Projects Include:
+- Case Study 1: Beer and Brewery Data
+- Methods 2: Analysis Life Expectancy (analyzed using Linear Models)
+- 
