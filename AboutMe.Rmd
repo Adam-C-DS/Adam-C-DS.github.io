@@ -10,7 +10,7 @@ output: html_document
 #### Interests
 - Data Science (Visualizations, ML, Time Series, EDA, Model fitting and analysis)
 - Outdoor Activities (Kayaking, Disc Golf, Hiking, Fishing, Hunting)
-- Martial Arts (Tae Kwon Do, BJJ)
+- Martial Arts (Tae Kwon Do, and others)
 - Mathematics and Education
 <br>   
     
