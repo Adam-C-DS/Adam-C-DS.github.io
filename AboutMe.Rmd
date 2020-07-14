@@ -1,0 +1,41 @@
+---
+title: "About Me"
+author: "Adam Canton"
+date: "As of 7/2020"
+output: html_document
+---
+
+---
+  
+#### Interests
+- Data Science (Visualizations, ML, Time Series, EDA, Model fitting and analysis)
+- Outdoor Activities (Kayaking, Disc Golf, Hiking, Fishing, Hunting)
+- Martial Arts (Tae Kwon Do, BJJ)
+- Mathematics and Education
+<br>   
+    
+#### Currently Employed by Aldine ISD
+- Honors College Algebra
+- PreAP Algebra II
+- PreAP Geometry
+- Advanced Quantitative Reasoning (AQR)
+<br>    
+    
+#### Past Work Experience
+- United States Navy - Hospital Corpsmen - 2005-09
+- Walgreens Pharmacy Technician - 2009-11
+- Atlas Commodities - Back office, Retail power, Compliance - 2013-15
+- Aldine ISD 2015 - Current
+<br>    
+    
+#### My Education
+- Associate in Applied Physics/Engineering - Austin Community College
+- Bachelors in Science of Applied Math
+- Currently enrolled in SMU Master in Data Science
+  - Expected graduation May 2022
+
+<br>
+<br>
+
+## Other tabs of this site contain work and analysis that I have completed
+    

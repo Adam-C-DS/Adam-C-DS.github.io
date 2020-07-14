@@ -1,12 +1,9 @@
 ---
-title: "Welcome"
+title: "My DS Analysis - Welcome"
 author: "Adam Canton"
-date: "7/13/2020"
+date: "7/2020"
 output: html_document
 ---
 
 
-# The Simple yet Awesome Website
-## Note: The 6 Lines of text above are the YAML tags
-### We will knit this Rmd to HTML
-### Then Push Index.html to Github.io repo
+# This site is the repository for my analysis.
