@@ -8,3 +8,5 @@ navbar:
       href: AboutMe.html
     - text: "Case Study 1 - Beers and Breweries"
       href: Case Study 1.html
+    - text: "Analysis of Life Expectancy"
+      href: Final_Draft_Code_Stats2Prjt1_AC_AP_GL.html
