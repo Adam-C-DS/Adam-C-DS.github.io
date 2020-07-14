@@ -1,5 +1,5 @@
 ---
-title: "My DS Analysis - Welcome"
+title: "My DS Analysis"
 author: "Adam Canton"
 date: "7/2020"
 output: html_document
@@ -10,4 +10,4 @@ output: html_document
 ## Current Projects Include:
 - Case Study 1: Beer and Brewery Data
 - Methods 2: Analysis Life Expectancy (analyzed using Linear Models)
-- 
+
